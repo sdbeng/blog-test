@@ -1,1 +1,33 @@
-<h2>Hello World - git pages</h2>
+<html ng-app>
+<head>
+	<title>Controllers in angularjs</title>
+</head>
+
+<!-- Body tag augmented with ngController directive  -->
+<body ng-controller="MyController">
+  <!-- controllers -->
+  <p>Working on some angularjs controller concepts.</p>
+
+  <div ng-controller="DoubleCtrl">
+	Two times <input ng-model="">
+	{{double}}
+  </div>
+
+
+
+  <input ng-model="foo" value="bar">
+  <!-- Button tag with ng-click directive, and
+         string expression 'buttonText'
+         wrapped in "{{ }}" markup -->
+  <button ng-click="changeFoo()">{{buttonText}}</button>
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular.min.js">
+</body>
+</html>
+
+
+
