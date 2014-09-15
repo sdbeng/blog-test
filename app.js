@@ -1,6 +1,6 @@
 var myApp = angular.module('myApp',[]);
 
-myApp.controller('MailListingCtrl', ['$scope',$http, function($scope,$http) {
+myApp.controller('MailListingCtrl', ['$scope','$http', function($scope,$http) {
  //  $scope.double = function(value) {
  //   return (value * 2); 
 	// };
