@@ -4,23 +4,16 @@
 </head>
 
 <!-- Body tag augmented with ngController directive  -->
-<body >
+<body>
   <!-- controllers -->
   <p>Working on some angularjs controller concepts.</p>
 
   <div ng-controller="DoubleCtrl">
-	Two times <input ng-model="double">
-	{{double}}
+	Two times <input ng-model="num">
+	{{double(num)}}
   </div>
 
 <br><br>
-
-  <input ng-model="foo" value="bar">
-  <!-- Button tag with ng-click directive, and
-         string expression 'buttonText'
-         wrapped in "{{ }}" markup -->
-  <button ng-click="changeFoo()">{{buttonText}}</button>
-
 
 
 
