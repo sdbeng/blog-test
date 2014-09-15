@@ -19,16 +19,20 @@
   <p>Working on some angularjs controller concepts.</p>
 
   <div class="row">
-  <div class="large-4 columns">sidebar
+  	<!-- Sidebar -->
+  <div class="large-4 columns">
+  	<h2>Sidebar</h2>
   	<div ng-controller="DoubleCtrl">
 	Two times <input type="num" ng-model="num">
-	{{double(num)}}
-  </div>
+	equal:{{double(num)}}
+  	</div>
 
   </div>
-  <div class="large-8 columns">content
+  <!-- Content -->
+  <div class="large-8 columns" ng-controller="HelloCtrl">
+  	<h2>Content</h2>
 
-	<div ng-controller="HelloCtrl">
+	<div>
 		<input type="text" ng-model="name">
 		{{name}}
 	</div>
