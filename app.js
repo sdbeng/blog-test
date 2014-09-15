@@ -1,12 +1,12 @@
 var myApp = angular.module('myApp',[]);
 
-myApp.controller('DoubleCtrl', ['$scope', function($scope) {
+myApp.controller('MailListingCtrl', ['$scope', function($scope) {
  //  $scope.double = function(value) {
  //   return (value * 2); 
 	// };
-	$scope.email = [];
+	
 
-	$scope.customerList =
+	$scope.email =[
 		{
 		to:"John DOe",
 		from:"Dani Cool",
@@ -22,10 +22,10 @@ myApp.controller('DoubleCtrl', ['$scope', function($scope) {
 		from:"Sonny Chance",
 		message:"Play that song, will ya?"
 		}
+	];
+		
 
-	$scope.save = function() {
-		$scope.customerList.push($scope.email);
-	}
+	
 }]);
 myApp.controller('HelloCtrl', ['$scope', function($scope) {
 	$scope.name = 'Hello';
