@@ -6,5 +6,5 @@ myApp.controller('DoubleCtrl', ['$scope', function($scope) {
 	};
 }]);
 myApp.controller('HelloCtrl', ['$scope', function($scope) {
-	$scope.name = {name};
+	$scope.name = 'Serg';
 }]);
