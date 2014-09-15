@@ -18,18 +18,32 @@
   <!-- controllers -->
   <p>Working on some angularjs controller concepts.</p>
 
-  <div ng-controller="DoubleCtrl">
+  <div class="row">
+  <div class="large-4 columns">sidebar
+  	<div ng-controller="DoubleCtrl">
 	Two times <input type="num" ng-model="num">
 	{{double(num)}}
   </div>
 
-<br><br>
-<div ng-controller="HelloCtrl">
-	<input type="text" ng-model="name">
-	{{name}}
+  </div>
+  <div class="large-8 columns">content
+
+	<div ng-controller="HelloCtrl">
+		<input type="text" ng-model="name">
+		{{name}}
+	</div>
+
+  </div>
 </div>
 
+  
 
+<br><br>
+
+
+
+
+<script src="js/vendor/jquery.js"></script>
 <script src="js/foundation.min.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular.min.js"></script>
