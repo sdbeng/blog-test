@@ -5,3 +5,6 @@ myApp.controller('DoubleCtrl', ['$scope', function($scope) {
    return value * 2; 
 	};
 }]);
+myApp.controller('HelloCtrl', ['$scope', function($scope) {
+	$scope.name = "Hey there!";
+}]);
