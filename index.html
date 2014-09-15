@@ -14,18 +14,28 @@
 
 <!-- Body tag augmented with ngController directive  -->
 <body>
-	<h1>Controllers</h1>
-  <!-- controllers -->
-  <p>Working on some angularjs controller concepts.</p>
+	<div class="container">
+		<h1>Controllers</h1>
+  		<!-- controllers -->
+  		<p>Working on some angularjs controller concepts.</p>
+	</div>
+	
 
   <div class="row">
   	<!-- Sidebar -->
   <div class="large-4 columns">
   	<h2>Sidebar</h2>
+
   	<div ng-controller="DoubleCtrl">
-	<p>Two times</p> 
-	<input type="num" ng-model="num"><br>
-	equal:{{double(num)}}
+  	<div ng-model="email">
+  		<ul>
+			<li ng-repeat="mail in customerList">
+				{{mail.to}}, {{mail.from}}, {{mail.message}}
+			</li>
+		</ul>	
+  	</div>
+	
+	
   	</div>
 
   </div>
