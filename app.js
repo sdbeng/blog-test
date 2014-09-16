@@ -9,10 +9,10 @@ myApp.controller('MailListingCtrl', ['$scope','$http', function($scope,$http) {
 	$scope.email = [];
 	$http({
 		method: 'GET',
-		url:'/js/api/data.json'
+		url:'bin/data/mail.json'
 	})
 	.success(function(data,status,headers){
-		$scope.email = data;
+		$scope.email = data.all;
 	})
 	.error(function(data,status,headers){
 
