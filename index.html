@@ -13,12 +13,18 @@
 </head>
 
 <!-- Body tag augmented with ngController directive  -->
-<body>
-	<div class="container">
-		<h1>Controllers</h1>
-  		<!-- controllers -->
-  		<p>Working on some angularjs controller concepts.</p>
-	
+<body ng-controller="HomeCtrl">
+	<div class="row large-centered">
+    
+      <h1>Controllers</h1>
+        <p>Working on some angularjs controller concepts.</p>
+    </div>
+    
+  </div>
+  
+      
+		
+	</div>
 	
 
   <div class="row">
@@ -28,9 +34,13 @@
 
   	<div ng-controller="MailListingCtrl">
   	<div>
-  		<ul>
-			<li ng-repeat="mail in email">
-				{{mail.to}}, {{mail.from}}, {{mail.message}}
+  		<ul id="emailListing">
+			<li ng-repeat="mail in email" ng-click="setSelectedMail(mail)">
+        <div class="container emailListing" ng-class="{selected: isSelected(mail)}">
+          <div class="small-8 columns">{{mail.from}}</div>
+          <div class="small-12 columns">{{mail.subject}}</div>
+        </div>
+				
 			</li>
 		</ul>	
   	</div>
@@ -40,17 +50,21 @@
 
   </div>
   <!-- Content -->
-    <div class="large-8 columns" id="contentarea-css" ng-controller="HelloCtrl">
+    <div class="large-8 columns" id="contentarea-css" ng-controller="ContentCtrl">
     	<h2>Content</h2>
+      <div ng-show="!selectedMail">
+        <h1>No conversation selected.</h1>
+      </div>
+      <div ng-show="selectedMail">
+        {{selectedMail}}
+      </div>
+      
 
-  	<div>
-  		<input type="text" ng-model="name">
-  		{{name}}
-  	</div>
+  
 
     </div>
   </div>
-</div>
+
 
   
 

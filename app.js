@@ -1,5 +1,19 @@
 var myApp = angular.module('myApp',[]);
 
+myApp.controller('HomeCtrl', ['$scope', function($scope) {
+	$scope.selectedMail;
+
+	$scope.setSelectedMail = function(mail) {
+		$scope.selectedMail = mail;
+	};
+
+	$scope.isSelected = function(mail) {
+		if ($scope.selectedMail) {
+			return $scope.selectedMail === mail;
+		};
+	};
+}]);
+
 myApp.controller('MailListingCtrl', ['$scope','$http', function($scope,$http) {
  //  $scope.double = function(value) {
  //   return (value * 2); 
@@ -21,6 +35,6 @@ myApp.controller('MailListingCtrl', ['$scope','$http', function($scope,$http) {
 
 	
 }]);
-myApp.controller('HelloCtrl', ['$scope', function($scope) {
+myApp.controller('ContentCtrl', ['$scope', function($scope) {
 	$scope.name = 'Hello';
 }]);
